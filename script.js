@@ -1,0 +1,39 @@
+/* global Vue */
+
+var app = new Vue({
+  el: "#app",
+  data: {
+    currentDogUrl: null,
+  favorites:[]
+  },
+    methods: {
+      loadDog: async function () {
+        const response = await fetch("https://dog.ceo/api/breeds/image/random");
+        const asJson = await response.json();
+        this.currentDogUrl = asJson.message;
+        console.log(this.currentDogUrl);
+      },
+      addFav: function() {
+        if (!this.favorites.includes(this.currentDogUrl)) {
+          this.favorites.push(this.currentDogUrl);
+        }
+        this.loadDog();
+      },
+      removeFav: function(dog) {
+        this.favorites = this.favorites.filter(item => item !== dog);
+      }
+    },
+    created() {
+      this.loadDog();
+    },
+  mounted() {
+    if (localStorage.favorites) {
+      this.favorites = JSON.parse(localStorage.favorites);
+    }
+  },  
+  watch: {
+    favorites(updatedFavorites) {
+      localStorage.favorites = JSON.stringify(updatedFavorites);
+    }
+                  }
+});

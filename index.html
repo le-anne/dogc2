@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Puppy</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500;700&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body>
+    
+    <div id="app" class="app">
+      <h1 class="title"> Puppy Love </h1>
+      
+    <img v-bind:src="currentDogUrl" alt="the goodest dog in the world" class="card">
+      <button @click="loadDog" class="nope"> Next </button>
+      <button @click="addFav" class="fav"> Favorite </button>
+      
+      <section class="favorites">
+        <h2> Loved </h2>
+      <ul class="favorites-list">
+        <li v-for="dog in favorites">
+        <img :src="dog" alt="favorite doggo" class="favorite-img">
+          <button @click="removeFav(dog)" class="remove"> Remove </button>
+        </li>
+      </ul>
+        </section>
+    </div>
+    
+  </body>
+</html>
+
+

@@ -1,0 +1,32 @@
+{
+    "theme_color": "blue",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Puppy Love",
+    "short_name": "Puppy",
+    "description": "An app for favoriting dogs.",
+    "icons": [
+        {
+            "src": "https://cdn.glitch.me/dd281d19-1471-4e8b-b02a-d21d6789d51a%2Ficon-192x192.png?v=1633641828424",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.glitch.me/dd281d19-1471-4e8b-b02a-d21d6789d51a%2Ficon-256x256.png?v=1633641823583",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.glitch.me/dd281d19-1471-4e8b-b02a-d21d6789d51a%2Ficon-384x384.png?v=1633641820353",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.glitch.me/dd281d19-1471-4e8b-b02a-d21d6789d51a%2Ficon-512x512.png?v=1633641816495",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
